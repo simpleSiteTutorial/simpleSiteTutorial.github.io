@@ -1,0 +1,47 @@
+<!doctype html>
+
+
+<html>
+	
+
+	<head>
+		<title>Simple Site: ULTIMATE</title>
+
+		<!-- Instead of typing our CSS inside our HTML, we can add the external CSS script here so everything is cleaner and easier to manage! We use the "href" attribute to specify the path tp the CSS style file -->
+		<link rel="stylesheet" type="text/css" href="home.css">
+	</head>
+
+
+	<body>
+
+		<h1>Our Ultra-Mega-Simple Website</h1>
+
+		<div>
+
+			<p>Hello there Earth!</p>
+
+			<img id="earthImage" src="earth.jpeg">
+
+			<a target="_blank" href="https://www.udk-berlin.de/en/courses/sound-studies-and-sonic-arts-master-of-arts/">
+				<img id="soundsImage" src="sounds.png">
+			</a>
+
+		</div>
+
+
+		<!-- Here we add Javascript (JS) directly into the HTML using <script>, similar to how we did with CSS in the last example with <style>. We can also replace this with a <link> to an external js file just like we did with the CSS in the <head> above! With Javascript we can do all kinds of interesting things, interactivity, API calling (to get data, etc from another website such as YouTube), communicating to and from servers, animations, etc.. The sky is the limit here, especially if you use JS libraries and frameworks that make it easy for you! -->
+		<script>
+			// Here we create a variable to refer to the "earthImage" using its ID
+			var earthImage = document.getElementById("earthImage");
+			var repeatingEvent = setInterval(animation, 500);
+			var degrees = 0;
+
+			function animation() {
+				degrees += 90;
+				earthImage.style.transform = 'rotate('+degrees+'deg)';
+			}
+		</script>
+
+	</body>
+
+</html>

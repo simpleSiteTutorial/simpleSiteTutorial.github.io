@@ -1,0 +1,38 @@
+/* We can specificy elements and change their style attributes to style them */
+
+/* Here we set style rules for the entire <body> */
+body {
+	/* Set the background color to Dark grey  */
+	background-color: rgb(80, 80, 80); /* Here color is set in RGB  */
+}
+
+/* Here we use "*" to say that we want to target EVERY element inside the <body> */
+body * {
+	display: block; /* We set the element displays to "Block" so that they stack vertically and then we no longer need to use <br> elements to create breaks */
+}
+
+/* Here we change the color and position of the text for ALL <h1> elements */
+h1 {
+	color: red;  /* Here color is set by a common color name */
+	text-align: center;
+}
+
+/* Here we change the style of the font for ALL <p> elements */
+p {
+	font-family: Arial;
+	font-size: 12pt;
+	font-style: italic;
+	color: #FFFFFF;  /* Here we set the color in HEX code */
+}
+
+/* Here things are different. Instead of referring to an element type, we are referring to an ID (identifier), so that we don't apply these style rules to EVERY element. See the Earth <img> in the HTML below to understand better! */
+#earthImage {
+	width: 200px;
+	height: 200px;
+}
+
+/* We do a similar thing as "earthImage", but we size the image based on the window size instead of pixels */
+#soundsImage {
+	width: 50%;
+	height: 50%;
+}
